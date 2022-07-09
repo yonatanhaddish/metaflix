@@ -1,27 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
+// import './navbar.css';
 // import { FaBloggerB } from "react-icons/fa";
 // FaBloggerB
 
-function NavbarContainer() {
+import { Nav } from "./Navbar.elements";
+
+const Navbar = () => {
+
+    useEffect(() => {
+        document.title = "MetaFlix"
+    });
+
   return (
     <>
-      <div className="nav-bar-container">
-        <div className="nav-bar">
-          <div className="nav-bar-logo">
-            {/* <FaBloggerB style={{color: 'red', fontSize: '25px'}}/> */}
-            <h1 className="comp-name">BetFlix</h1>
-          </div>
-          <div className="nav-menu">
-            <div className="nav-item">Home</div>
-            <div className="nav-item">Favourite</div>
-          </div>
-        </div>
-      </div>
+      <Nav>
+        {/* <NavbarContainer>
+            <NavLogo>MetaFlix</NavLogo>
+            <NavMenu>
+                <NavItem>
+                    <NavLinks to="/">Home</NavLinks>
+                </NavItem>
+                <NavItem>
+                    <NavLinks to="/favourite">Favourite</NavLinks>
+                </NavItem>
+            </NavMenu>
+        </NavbarContainer> */}
+      </Nav>
     </>
   );
 }
 
-export default NavbarContainer;
+export default Navbar;
 
 {
   /* <Navbar bg="dark" variant="dark">

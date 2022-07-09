@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-// import MovieList from "./components/MoviesList";
+import MovieList from "./components/MovieList/MoviesList";
 
 import Navbar from "./components/Navbar/Navbar";
 // import { GlobalStyle } from "./globalStyles";
@@ -27,9 +27,9 @@ function App() {
 
   return (
     <>
-    <GlobalStyle />
+    {/* <GlobalStyle /> */}
     <Navbar />
-    {/* <MovieList movies={movies} /> */}
+    <MovieList movies={movies} />
     </>
   );
 }
