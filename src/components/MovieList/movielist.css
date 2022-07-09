@@ -12,6 +12,8 @@
     }
 } */
 .cards {
+    display: flex;
+    flex-direction: column;
     border: solid black 1px;
     width: 320px;
     height: 40rem;
@@ -32,11 +34,16 @@ img {
 .card-heart {
     margin-bottom: 30px;
     padding-top: 30px;
-    text-align:center;
-    justify-content: center;
+    flex-direction: column;
+    /* text-align:center;
+    justify-content: center; */
 }
 
 .card-body {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+/* .heart {
+    cursor: pointer;
+} */
