@@ -1,7 +1,42 @@
 .container {
+    background-color: aqua;
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    background-color: red;
-};
+    flex-wrap: wrap;
+    /* width: 100%; */
+    padding-left: 150px;
+}
+/* 
+@media screen and (max-width: 950px) {
+    .container {
+        padding-left: 100px;
+    }
+} */
+.cards {
+    border: solid black 1px;
+    width: 320px;
+    height: 40rem;
+    /* opacity: 20%; */
+    text-align: center;
+    background-color: white;
+    margin: 40px;
+    
+}
+.cards:hover {
+    opacity: 100%;
+}
 
+img {
+    width: 100%;
+}
+
+.card-heart {
+    margin-bottom: 30px;
+    padding-top: 30px;
+    text-align:center;
+    justify-content: center;
+}
+
+.card-body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

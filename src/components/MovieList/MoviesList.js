@@ -4,7 +4,6 @@ import Heart from "react-heart";
 
 const MovieList = (props) => {
   return (
-    <>
       <div className="container">
         {props.movies.map((movie, index) => (
           <div className="cards">
@@ -16,16 +15,15 @@ const MovieList = (props) => {
               />
             </div>
             <div className="card-body">
-                <h1>Movie Title</h1>
-                <p>Release Date</p>
+                <h2>{movie.title}</h2>
+                {/* <p>Release Date: {movie.release_date}</p> */}
             </div>
             <div className="card-heart">
-                <Heart style={{width: "1.5rem"}}/>
+                <Heart className="heart" style={{width: "1.5rem"}}/>
             </div>
           </div>
         ))}
       </div>
-    </>
   );
 };
 
