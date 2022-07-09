@@ -19,7 +19,7 @@ const MovieList = (props) => {
                 <h1>Movie Title</h1>
                 <p>Release Date</p>
             </div>
-            <div className="card-fav-icon">
+            <div className="card-heart">
                 <Heart style={{width: "1.5rem"}}/>
             </div>
           </div>
@@ -30,10 +30,3 @@ const MovieList = (props) => {
 };
 
 export default MovieList;
-{
-  /* <img
-                src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-                alt="movie"
-                className="single-image"
-              /> */
-}
