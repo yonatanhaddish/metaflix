@@ -39,7 +39,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<MovieList movies={movies} />} />
-        <Route exact path="/liked" element={<MovieList newFavMovies= {newFavMovies} />} />
+        {/* <Route exact path="/liked" element={ <FavouritesList  newFavMovies={newFavMovies}/>} /> */}
       </Routes>
     </Router>
   );

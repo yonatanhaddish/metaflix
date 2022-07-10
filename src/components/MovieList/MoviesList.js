@@ -13,7 +13,7 @@ const MovieList = (props) => {
     console.log(newFavMovies);
     console.log(movie);
     // console.log(movies)
-    console.log(favMovies);
+    // console.log(favMovies);
     return newFavMovies;
   };
   // const remoteFav = (movie) => {
@@ -28,6 +28,8 @@ const MovieList = (props) => {
     } else {
       console.log("errrrrrrr");
     }
+    // console.log('Yonatan')
+    // console.log(movie);
   };
 
   return (
@@ -56,11 +58,9 @@ const MovieList = (props) => {
               // onClick= {(e) => handleFav(movie)} setFavMovies={setFavMovies}
               onClick={(evt) => handleToogle(movie)}
             />
-            {/* <FavouritesList favMovies={favMovies}/> */}
           </div>
         </div>
       ))}
-      {/* <FavouritesList favMovies= {favMovies} /> */}
     </div>
   );
 };

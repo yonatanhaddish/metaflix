@@ -6,8 +6,16 @@
 
 // const FavouritesList = (props) => {
 //   return (
-//     // <h1>{props}</h1>
-//     );
+//       props.newFavMovies.map( (movie, index) => 
+//       {
+//         console.log("Yonatan")
+//             console.log(movie)
+//     }
+//     )
+//     )
 // };
 
 // export default FavouritesList;
+
+
+
