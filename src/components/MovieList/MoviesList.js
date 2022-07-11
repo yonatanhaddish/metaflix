@@ -5,7 +5,7 @@ import Heart from "react-heart";
 const MovieList = (props) => {
 
   const FavouriteComponent = props.favouriteComponent;
-  console.log(FavouriteComponent)
+  // console.log(FavouriteComponent)
 
   return (
     <div className="container">
@@ -23,8 +23,9 @@ const MovieList = (props) => {
             <p>{movie.title}</p>
             {/* <p>Release Date: {movie.release_date}</p> */}
           </div>
-          <div className="card-heart">
-            <FavouriteComponent />
+          <div className="card-heart" onClick={() => props.handleFavouritesClick(movie)}>
+          
+            <FavouriteComponent  />
             
           </div>
           

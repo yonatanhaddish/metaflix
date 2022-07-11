@@ -1,7 +1,7 @@
 import React from "react";
 import Heart from "react-heart";
 
-const FavouritesList = () => {
+const FavouritesList = (props) => {
   return(
     <>
     <Heart
