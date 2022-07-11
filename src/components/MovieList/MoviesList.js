@@ -5,7 +5,7 @@ import Heart from "react-heart";
 const MovieList = (props) => {
 
   const FavouriteComponent = props.favouriteComponent;
-  // console.log(FavouriteComponent)
+  console.log(props)
 
   return (
     <div className="container">
@@ -28,6 +28,7 @@ const MovieList = (props) => {
             <FavouriteComponent  />
             
           </div>
+          
           
         </div>
         

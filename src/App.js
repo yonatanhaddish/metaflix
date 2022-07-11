@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MovieList from "./components/MovieList/MoviesList";
 // import Navbar from "./components/Navbar/Navbar";
 import FavouritesList from './components/MovieList/FavouritesList';
+import FavList from "./components/MovieList/FavList";
 
 
 function App() {
@@ -31,13 +32,16 @@ function App() {
   }
 
   return (
-    // <Router basename="/">
-    //   {/* <Navbar /> */}
-    //   <Routes>
-    //     <Route exact path="/" element={<MovieList movies={movies} handleFavouritesClick={addFavouriteMovie} favouriteComponent={AddFavourites}/>} />
-    //   </Routes>
-    // </Router>
-    <MovieList movies={movies} handleFavouritesClick={addFavouriteMovie}  favouriteComponent={FavouritesList}/>
+    <Router basename="/">
+      {/* <Navbar /> */}
+      <Routes>
+        <Route exact path="/" element={<MovieList movies={movies} handleFavouritesClick={addFavouriteMovie}  favouriteComponent={FavouritesList}/>} />
+      </Routes>
+    </Router>
+    // <MovieList movies={movies} handleFavouritesClick={addFavouriteMovie}  favouriteComponent={FavouritesList}/>
+    // <FavList favMovies={favMovies}/>
+    
+
   
   );
 }
