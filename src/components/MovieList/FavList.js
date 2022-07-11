@@ -3,6 +3,7 @@ import "./movielist.css";
 
 const FavList = (prop) => {
   return (
+
     <div className="container">
       {prop.favMovies.map((favMovie, index) => (
         <div className="cards">

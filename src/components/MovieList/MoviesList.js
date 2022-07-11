@@ -5,7 +5,9 @@ import Heart from "react-heart";
 const MovieList = (props) => {
 
   const FavouriteComponent = props.favouriteComponent;
-  console.log(props)
+
+  // const [active, setActive] = (false)
+  // console.log(clicked)
 
   
 
@@ -25,7 +27,9 @@ const MovieList = (props) => {
             <p>{movie.title}</p>
             {/* <p>Release Date: {movie.release_date}</p> */}
           </div>
-          <div className="card-heart" onClick={(e) => props.handleFavouritesClick(movie)}>
+          <div className="card-heart"
+              // isActive={active}
+              onClick={(e) => props.handleFavouritesClick(movie)}>
           
             <FavouriteComponent />
             
@@ -40,3 +44,4 @@ const MovieList = (props) => {
 };
 
 export default MovieList;
+

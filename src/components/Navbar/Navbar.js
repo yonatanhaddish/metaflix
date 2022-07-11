@@ -13,7 +13,6 @@ const Navbar = () => {
       <div className="nav-bar-container">
         <div className="nav-bar">
           <div className="nav-bar-logo">
-            {/* <FaBloggerB style={{color: 'red', fontSize: '25px'}}/> */}
             <h1 className="comp-name">MetaFlix</h1>
           </div>
           <div className="nav-menu">

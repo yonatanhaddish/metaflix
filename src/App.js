@@ -6,6 +6,9 @@ import AddFavourite from "./components/MovieList/AddFavourite";
 import FavList from "./components/MovieList/FavList";
 import Navbar from "./components/Navbar/Navbar";
 import RemoveFav from "./components/MovieList/RemoveFav";
+// import Heart from "react-heart";
+import Heart from "./components/MovieList/AddFavourite"
+import heart from './components/MovieList/heart.css'
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -18,7 +21,7 @@ function App() {
 
     const response = await fetch(url);
     const responseJson = await response.json();
-    console.log(responseJson);
+    // console.log(responseJson);
     setMovies(responseJson.results);
   };
 
@@ -28,11 +31,11 @@ function App() {
 
   const addFavouriteMovie = (movie) => {
     const newFavouriteList = [...favMovies, movie];
+    console.log(newFavouriteList);
+    
     setFavMovies(newFavouriteList);
     saveToLocalStorege(newFavouriteList);
-    console.log(newFavouriteList);
-    console.log(movie)
-    changeClick(movie)
+    
   };
 
   const removeFavouriteMovie = (movie) => {
@@ -50,16 +53,12 @@ function App() {
 
   useEffect(() => {
     const movieFavourites = JSON.parse(localStorage.getItem("fav-movies"));
+    console.log(movieFavourites)
 
     if (movieFavourites) {
       setFavMovies(movieFavourites);
     }
   }, []);
-
-  const changeClick = (movie) => {
-    console.log(movie);
-    setActive(!active)
-  };
 
   return (
     <Router basename="/">
@@ -73,7 +72,6 @@ function App() {
               movies={movies}
               handleFavouritesClick={addFavouriteMovie}
               favouriteComponent={AddFavourite}
-              handleClick={changeClick}
               active={active}
               setActive={setActive}
             />
