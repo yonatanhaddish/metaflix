@@ -1,21 +1,16 @@
-// import React, { useState } from "react";
-// import Heart from "react-heart";
-// import MovieList from "./MoviesList";
+import React from "react";
+import Heart from "react-heart";
 
-// const [finalFav, setFinalFev] = useState();
+const FavouritesList = () => {
+  return(
+    <>
+    <Heart
+              className="heart"
+              style={{ width: "1.5rem" }}
+              // onClick={() => props.handleFavouritesClick(movie)}
+            />
+    </>
+  )
+}
 
-// const FavouritesList = (props) => {
-//   return (
-//       props.newFavMovies.map( (movie, index) => 
-//       {
-//         console.log("Yonatan")
-//             console.log(movie)
-//     }
-//     )
-//     )
-// };
-
-// export default FavouritesList;
-
-
-
+export default FavouritesList;

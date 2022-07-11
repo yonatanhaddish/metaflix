@@ -1,36 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./movielist.css";
 import Heart from "react-heart";
-// import FavouritesList from "./FavouritesList";
 
 const MovieList = (props) => {
-  const [favMovies, setFavMovies] = useState([]);
-  const [active, setActive] = useState(false);
 
-  const handleFav = (movie) => {
-    const newFavMovies = [...favMovies, movie];
-    setFavMovies(newFavMovies);
-    console.log(newFavMovies);
-    console.log(movie);
-    // console.log(movies)
-    // console.log(favMovies);
-    return newFavMovies;
-  };
-  // const remoteFav = (movie) => {
-  //     const newFavRemoved = []
-  // }
-
-  const handleToogle = (movie) => {
-    setActive(!active);
-    if (!active) {
-      handleFav(movie);
-      console.log("correct");
-    } else {
-      console.log("errrrrrrr");
-    }
-    // console.log('Yonatan')
-    // console.log(movie);
-  };
+  const FavouriteComponent = props.favouriteComponent;
+  console.log(FavouriteComponent)
 
   return (
     <div className="container">
@@ -39,7 +14,8 @@ const MovieList = (props) => {
           <div className="card-img">
             <img
               src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-              alt={index}
+              alt="movie"
+              key={index.toString()}
               className="single-image"
             />
           </div>
@@ -48,18 +24,12 @@ const MovieList = (props) => {
             {/* <p>Release Date: {movie.release_date}</p> */}
           </div>
           <div className="card-heart">
-            <Heart
-              movies={movie}
-              setFavMovies={setFavMovies}
-              className="heart"
-              style={{ width: "1.5rem" }}
-              value={setFavMovies}
-              isActive={active}
-              // onClick= {(e) => handleFav(movie)} setFavMovies={setFavMovies}
-              onClick={(evt) => handleToogle(movie)}
-            />
+            <FavouriteComponent />
+            
           </div>
+          
         </div>
+        
       ))}
     </div>
   );
