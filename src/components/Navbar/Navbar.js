@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
-// import './navbar.css';
-// import { FaBloggerB } from "react-icons/fa";
-// FaBloggerB
+import './navbar.css';
 
-import { Nav } from "./Navbar.elements";
 
 const Navbar = () => {
 
@@ -17,11 +14,15 @@ const Navbar = () => {
         <div className="nav-bar">
           <div className="nav-bar-logo">
             {/* <FaBloggerB style={{color: 'red', fontSize: '25px'}}/> */}
-            <h1 className="comp-name">BetFlix</h1>
+            <h1 className="comp-name">MetaFlix</h1>
           </div>
           <div className="nav-menu">
-            <div className="nav-item">Home</div>
-            <div className="nav-item">Favourite</div>
+            <div className="nav-item">
+              <a href="/">Home</a>
+            </div>
+            <div className="nav-item">
+              <a href="/liked">Favourite</a>
+            </div>
           </div>
         </div>
       </div>

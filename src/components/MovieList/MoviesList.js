@@ -27,7 +27,7 @@ const MovieList = (props) => {
           </div>
           <div className="card-heart" onClick={(e) => props.handleFavouritesClick(movie)}>
           
-            <FavouriteComponent  />
+            <FavouriteComponent />
             
           </div>
           

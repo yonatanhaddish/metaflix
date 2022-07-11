@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./movielist.css";
 
 const FavList = (prop) => {
-console.log(prop)
   return (
     <div className="container">
       {prop.favMovies.map((favMovie, index) => (
@@ -17,7 +16,7 @@ console.log(prop)
           </div> 
            <div className="card-body">
             <p>{favMovie.title}</p>
-          </div> 
+          </div>
         </div>
         
       ))}
