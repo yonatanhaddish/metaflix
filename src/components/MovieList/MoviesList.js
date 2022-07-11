@@ -7,6 +7,8 @@ const MovieList = (props) => {
   const FavouriteComponent = props.favouriteComponent;
   console.log(props)
 
+  
+
   return (
     <div className="container">
       {props.movies.map((movie, index) => (
@@ -23,7 +25,7 @@ const MovieList = (props) => {
             <p>{movie.title}</p>
             {/* <p>Release Date: {movie.release_date}</p> */}
           </div>
-          <div className="card-heart" onClick={() => props.handleFavouritesClick(movie)}>
+          <div className="card-heart" onClick={(e) => props.handleFavouritesClick(movie)}>
           
             <FavouriteComponent  />
             

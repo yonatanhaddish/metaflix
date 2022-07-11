@@ -4,6 +4,8 @@ import MovieList from "./components/MovieList/MoviesList";
 // import Navbar from "./components/Navbar/Navbar";
 import FavouritesList from './components/MovieList/FavouritesList';
 import FavList from "./components/MovieList/FavList";
+import Navbar from './components/Navbar/Navbar';
+import RemoveFav from "./components/MovieList/RemoveFav";
 
 
 function App() {
@@ -28,18 +30,52 @@ function App() {
   const addFavouriteMovie = (movie) => {
     const newFavouriteList = [...favMovies, movie];
     setFavMovies(newFavouriteList);
+    saveToLocalStorege(newFavouriteList)
     console.log(newFavouriteList)
+  };
+
+  const removeFavouriteMovie = (movie) => {
+    const newFavouriteList = favMovies.filter(
+      (favMovie) => favMovie.id !== movie.id
+    );
+
+    setFavMovies(newFavouriteList);
+    saveToLocalStorege(newFavouriteList);
   }
+
+ const saveToLocalStorege = (items) => {
+  localStorage.setItem('fav-movies', JSON.stringify(items));
+ };
+
+ useEffect(() => {
+  const movieFavourites = JSON.parse(
+    localStorage.getItem('fav-movies')
+  );
+
+  if (movieFavourites) {
+    setFavMovies(movieFavourites);
+  }
+}, []);
+
+
+  const changeClick = (e) => {
+    console.log("test")
+  }
+
 
   return (
     <Router basename="/">
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
-        <Route exact path="/" element={<MovieList movies={movies} handleFavouritesClick={addFavouriteMovie}  favouriteComponent={FavouritesList}/>} />
+        <Route exact path="/" element={<MovieList movies={movies} handleFavouritesClick={addFavouriteMovie}  favouriteComponent={FavouritesList} handleClick={changeClick}/>} />
+        <Route exact path="/liked" element={<FavList favMovies={favMovies} favouriteComponent={RemoveFav} handleFavouritesClick={removeFavouriteMovie}/>} />
       </Routes>
     </Router>
+    // <>
+    // <Navbar />
     // <MovieList movies={movies} handleFavouritesClick={addFavouriteMovie}  favouriteComponent={FavouritesList}/>
     // <FavList favMovies={favMovies}/>
+    // </>
     
 
   
