@@ -35,14 +35,20 @@ function App() {
     
     setFavMovies(newFavouriteList);
     saveToLocalStorege(newFavouriteList);
+    handleClick(movie);
     
+  };
+
+  const handleClick = (movie) => {
+    setActive(!active)
+    console.log(active)
+    setActive(movie)
   };
 
   const removeFavouriteMovie = (movie) => {
     const newFavouriteList = favMovies.filter(
       (favMovie) => favMovie.id !== movie.id
     );
-
     setFavMovies(newFavouriteList);
     saveToLocalStorege(newFavouriteList);
   };
@@ -60,6 +66,7 @@ function App() {
     }
   }, []);
 
+
   return (
     <Router basename="/">
       <Navbar />
@@ -70,10 +77,11 @@ function App() {
           element={
             <MovieList
               movies={movies}
+              favMovies={favMovies}
               handleFavouritesClick={addFavouriteMovie}
               favouriteComponent={AddFavourite}
-              active={active}
-              setActive={setActive}
+              isActive={active}
+
             />
           }
         />
@@ -82,6 +90,7 @@ function App() {
           path="/liked"
           element={
             <FavList
+            movies={movies}
               favMovies={favMovies}
               favouriteComponent={RemoveFav}
               handleFavouritesClick={removeFavouriteMovie}

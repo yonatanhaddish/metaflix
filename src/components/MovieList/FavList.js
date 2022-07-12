@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./movielist.css";
 
 const FavList = (prop) => {
+
+  const FavouriteComponent = prop.favouriteComponent;
+
   return (
 
     <div className="container">
@@ -17,6 +20,14 @@ const FavList = (prop) => {
           </div> 
            <div className="card-body">
             <p>{favMovie.title}</p>
+          </div>
+          <div className="card-heart"
+              >
+          
+            {/* <FavouriteComponent /> */}
+            
+            <div><button onClick={() => prop.handleFavouritesClick(favMovie)}>Remove</button></div>
+            
           </div>
         </div>
         

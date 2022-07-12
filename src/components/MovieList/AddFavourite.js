@@ -3,19 +3,23 @@ import Heart from "react-heart";
 import './movielist.css'
 
 const AddFavourite = (props) => {
-  
 
+  
+  
+const styleHeart = {
+  width: "1.5rem",
+  // fill: "red"
+};
+  
   
 
   return(
     <>
     <Heart
               className="heart"
-              style={{ width: "1.5rem" }}
-              
-              // isActive={active}
+              style={styleHeart}
               // onClick={() => props.handleFavouritesClick(movie)}
-              // onClick= {() => handleC()}
+              // onClick= {() => props.handleClick()}
             />
     </>
   )

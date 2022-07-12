@@ -6,8 +6,10 @@ const MovieList = (props) => {
 
   const FavouriteComponent = props.favouriteComponent;
 
-  // const [active, setActive] = (false)
-  // console.log(clicked)
+  // const [active, setActive] = useState(false)
+  // const handleClick = (movie) => {
+  //   console.log("handleClick")
+  // };
 
   
 
@@ -25,11 +27,9 @@ const MovieList = (props) => {
           </div>
           <div className="card-body">
             <p>{movie.title}</p>
-            {/* <p>Release Date: {movie.release_date}</p> */}
           </div>
           <div className="card-heart"
-              // isActive={active}
-              onClick={(e) => props.handleFavouritesClick(movie)}>
+              onClick={() => props.handleFavouritesClick(movie)}>
           
             <FavouriteComponent />
             
@@ -45,3 +45,4 @@ const MovieList = (props) => {
 
 export default MovieList;
 
+// (e) => props.handleFavouritesClick(movie)
