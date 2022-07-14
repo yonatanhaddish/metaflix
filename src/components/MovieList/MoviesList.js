@@ -6,10 +6,13 @@ const MovieList = (props) => {
 
   const FavouriteComponent = props.favouriteComponent;
 
-  // const [active, setActive] = useState(false)
-  // const handleClick = (movie) => {
-  //   console.log("handleClick")
-  // };
+  const [activee, setActivee] = useState(false)
+  const handleClickk = ({movie, index}) => {
+    
+    setActivee(!activee);
+    console.log(activee)
+
+  };
 
   
 
@@ -21,17 +24,18 @@ const MovieList = (props) => {
             <img
               src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
               alt="movie"
-              key={index.toString()}
+              key={index}
               className="single-image"
             />
           </div>
-          <div className="card-body">
-            <p>{movie.title}</p>
+          <div className="card-body" onClick={() => handleClickk({movie, index})}>
+            <p className={activee ? 'bg-class' : 'bg-bg-class'}>
+              {movie.title}</p>
           </div>
           <div className="card-heart"
               onClick={() => props.handleFavouritesClick(movie)}>
           
-            <FavouriteComponent />
+            <FavouriteComponent movie={movie} index={index} activee={activee}/>
             
           </div>
           

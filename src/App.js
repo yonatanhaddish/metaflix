@@ -35,14 +35,15 @@ function App() {
     
     setFavMovies(newFavouriteList);
     saveToLocalStorege(newFavouriteList);
-    handleClick(movie);
+    handleClick(newFavouriteList);
     
   };
 
-  const handleClick = (movie) => {
+  const handleClick = (newFavouriteList) => {
     setActive(!active)
     console.log(active)
-    setActive(movie)
+    setActive(newFavouriteList)
+    console.log(newFavouriteList)
   };
 
   const removeFavouriteMovie = (movie) => {
