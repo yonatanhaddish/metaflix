@@ -1,6 +1,11 @@
-/* .heart{
-    color: blue;
+.bg-salmon {
+    width: 1.5rem;
+    background-color: green;
+    color: aquamarine;
+}
 
-    
- }
-  */
+.bg-salmon-01 {
+    width: 2.5rem;
+    background-color: pink;
+    border: solid 1px yellow;
+}
