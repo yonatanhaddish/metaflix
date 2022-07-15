@@ -27,3 +27,9 @@ There are no tests for this application currently. (Will be implemneted soon.)
 If you have any questions about this project, please contact me directly at yonihailshn@gmail.com
 
 ## ScreenShots
+
+<img width="961" alt="HomePage" src="https://user-images.githubusercontent.com/78513952/179241938-a4553aa1-3b1c-4cde-9371-e46a6c13a643.png">
+
+<img width="961" alt="HomePage01" src="https://user-images.githubusercontent.com/78513952/179241992-fb99e2a6-fcfb-4828-a854-5d2c884bce07.png">
+
+<img width="961" alt="LikedPage" src="https://user-images.githubusercontent.com/78513952/179242004-4ba574e2-a109-4774-919f-4fd46ddbb7f3.png">
