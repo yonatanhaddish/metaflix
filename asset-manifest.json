@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/metaflix/static/css/main.50436642.css",
+    "main.js": "/metaflix/static/js/main.c3fd3966.js",
+    "static/js/787.0be5bbc7.chunk.js": "/metaflix/static/js/787.0be5bbc7.chunk.js",
+    "index.html": "/metaflix/index.html",
+    "main.50436642.css.map": "/metaflix/static/css/main.50436642.css.map",
+    "main.c3fd3966.js.map": "/metaflix/static/js/main.c3fd3966.js.map",
+    "787.0be5bbc7.chunk.js.map": "/metaflix/static/js/787.0be5bbc7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50436642.css",
+    "static/js/main.c3fd3966.js"
+  ]
+}
