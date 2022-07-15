@@ -9,7 +9,7 @@ This is a simple model of a Movie List App that displays the list of movies from
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
-* [ScreenShots](#screen-shots)
+* [Screenshots](#screenshots)
 
 ## Installation
 The user should clone the repository from Github. This application requires of react-heart, react-router-dom.
